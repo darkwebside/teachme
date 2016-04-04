@@ -18,11 +18,11 @@ class CreateTicketVotesTable extends Migration {
 
 			// Referencia al usuario que emite el voto
 			$table->integer('user_id')->unsigned();
-			$table->foreign('user_id')->references('id')->on('users');
+			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 			// Referencia al Ticket por el que vota el suario
 
 			$table->integer('ticket_id')->unsigned();
-			$table->foreign('ticket_id')->references('id')->on('tickets');
+			$table->foreign('ticket_id')->references('id')->on('tickets')->onDelete('cascade');
 
 			$table->timestamps();
 		});
