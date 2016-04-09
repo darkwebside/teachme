@@ -5,11 +5,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class DatabaseSeeder extends Seeder
 {
-
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run()
     {
@@ -17,6 +14,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call('UserTableSeeder');
         $this->call('TicketTableSeeder');
+        $this->call('TicketVoteTableSeeder');
+        $this->call('TicketCommentTableSeeder');
     }
-
 }
